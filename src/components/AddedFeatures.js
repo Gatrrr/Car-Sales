@@ -3,7 +3,9 @@ import AddedFeature from './AddedFeature';
 import { connect } from "react-redux";
 
 const AddedFeatures = ({ car, removeFeature }) => {
+
   return (
+
       <div className="content">
           <h6>Added features:</h6>
           {car.features.length ? (
@@ -20,6 +22,7 @@ const AddedFeatures = ({ car, removeFeature }) => {
               <p>You can purchase items from the store.</p>
           )}
       </div>
+
   );
 };
 
@@ -28,6 +31,7 @@ const mapStateToProps = state => {
       car: state.car
   };
 };
+
 export default connect(
   mapStateToProps,
   {}

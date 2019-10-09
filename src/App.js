@@ -19,20 +19,25 @@ const App = ({ state, addFeature, removeItem }) => {
 
   return (
     <div className="boxes">
+
         <div className="box">
             <Header car={state.car} />
             <AddedFeatures car={state.car} removeFeature={removeFeature} />
         </div>
+
         <div className="box">
             <AdditionalFeatures
                 store={state.store}
                 buyItem={buyItem}
             />
+
             <Total
                 car={state.car}
                 additionalPrice={state.additionalPrice}
             />
+
         </div>
+        
     </div>
 );
 };
